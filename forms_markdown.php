@@ -103,7 +103,7 @@ class markdown_parser{
 		'radiogroup' => "\t\t<div class=\"md_radiogroup %s\">\n\t\t\t<fieldset data-role=\"controlgroup\" data-type=\"horizontal\">\n%s\n\t\t\t</fieldset>\n\t\t</div>",
 		'radio' => "\t\t\t<div class=\"md_radio md_subfield\">\n\t\t\t\t<input type=\"radio\" id=\"%s\" class=\"md_radio_element\" name=\"md_%s\" value=\"%s\"%s />\n\t\t\t\t<label for=\"%s\" class=\"md_radio_label\">%s</label>\n\t\t\t</div>",
 		'label' => "<div class=\"md_label\">\n\t\t\t<label class=\"md_label_element\">%s %s</label>\n\t\t</div>",
-		'range' => "<div class=\"md_range\">\n\t\t\t%s <input class=\"md_range_element\" type=\"range\" name=\"%s\" min=\"%s\" max=\"%s\" step=\"%s\" value=\"%s\" data-highlight=\"true\" /> %s</div>",
+		'range' => "<div class=\"md_range\">\n\t\t\t<input class=\"md_range_element\" type=\"range\" name=\"%s\" min=\"%s\" max=\"%s\" step=\"%s\" value=\"%s\" data-highlight=\"true\" /></div>",
 		'toggle' => "<div class=\"md_toggle\" data-role=\"slider\">\n\t\t\t<select name=\"%s\" data-role=\"slider\" class=\"%s md_toggle_element\">\n\t\t\t\t%s\n\t\t\t</select>\n\t\t</div>",
 		'text' => "\t\t<div class=\"md_text\">
 			<input 
@@ -271,13 +271,11 @@ class markdown_parser{
 		$template = vsprintf(
 			$this->html_templates['range'],
 			array(
-				$element['options']['min'],
 				$element['label'],
 				$element['options']['min'],
 				$element['options']['max'],
 				$element['options']['step'],
 				$element['options']['value'],
-				$element['options']['max']
 			)
 		);
 		$label = sprintf(
@@ -291,8 +289,7 @@ class markdown_parser{
 			$this->html_templates['element'],
 			$template
 		);
-	}
-	
+	}	
 	/**
 	*	jQuery dependent
 	*	@return string html template for a toggle
