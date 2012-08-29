@@ -93,18 +93,18 @@ class markdown_parser{
 		'container' => "<div id=\"md_form\" class=\"md_form_container\">\n\t%s\n</div>",
 		'form' => "<form%s>\n\t%s\n</form>",
 		'title' => "<div class=\"md_title_container\">\n\t\t<h3 class=\"md_title\">%s</h3>\n\t</div>",
-		'header' => "\t<div class=\"md_header_container\">\n\t\t<div class=\"md_header\" data-role=\"header\">%s</div>\n\t</div>",
-		'footer' => "\t<div class=\"md_footer_container\">\n\t\t<div class=\"md_footer\" data-role=\"footer\">%s</div>\n\t</div>",
+		'header' => "\t<div class=\"md_header_container\">\n\t\t<div class=\"md_header\" data-role=\"header\"><h4>%s</h4></div>\n\t</div>",
+		'footer' => "\t<div class=\"md_footer_container\">\n\t\t<div class=\"md_footer\" data-role=\"footer\"><h4>%s</h4></div>\n\t</div>",
 		'element' => "\t<div class=\"md_element\">\n\t\t%s\n\t</div>",
 		'select' => "<div class=\"md_select\">\n\t\t\t<select name=\"%s\" class=\"%s md_select_element\">\n\t\t\t\t%s\n\t\t\t</select>\n\t\t</div>",
 		'option' => '<option value="%s"%s>%s</option>',
-		'checkboxgroup' => "\t\t<div class=\"md_checkboxgroup %s\">\n%s\n\t\t</div>",
+		'checkboxgroup' => "\t\t<div class=\"md_checkboxgroup %s\">\n\t\t\t<fieldset data-role=\"controlgroup\" data-type=\"horizontal\">\n%s\n\t\t\t</fieldset>\n\t\t</div>",
 		'checkbox' => "\t\t\t<div class=\"md_checkbox md_subfield\">\n\t\t\t\t<input type=\"checkbox\" id=\"%s\" class=\"md_checkbox_element\" name=\"md_%s\" value=\"%s\"%s />\n\t\t\t\t<label for=\"%s\" class=\"md_checkbox_label\">%s</label>\n\t\t\t</div>",
-		'radiogroup' => "\t\t<div class=\"md_radiogroup %s\">\n%s\n\t\t</div>",
+		'radiogroup' => "\t\t<div class=\"md_radiogroup %s\">\n\t\t\t<fieldset data-role=\"controlgroup\" data-type=\"horizontal\">\n%s\n\t\t\t</fieldset>\n\t\t</div>",
 		'radio' => "\t\t\t<div class=\"md_radio md_subfield\">\n\t\t\t\t<input type=\"radio\" id=\"%s\" class=\"md_radio_element\" name=\"md_%s\" value=\"%s\"%s />\n\t\t\t\t<label for=\"%s\" class=\"md_radio_label\">%s</label>\n\t\t\t</div>",
 		'label' => "<div class=\"md_label\">\n\t\t\t<label class=\"md_label_element\">%s %s</label>\n\t\t</div>",
 		'range' => "<div class=\"md_range\">\n\t\t\t%s <input class=\"md_range_element\" type=\"range\" name=\"%s\" min=\"%s\" max=\"%s\" step=\"%s\" value=\"%s\" /> %s</div>",
-		'toggle' => "<div class=\"md_toggle\" data-role=\"slider\">\n\t\t\t<select name=\"%s\" class=\"%s md_toggle_element\">\n\t\t\t\t%s\n\t\t\t</select>\n\t\t</div>",
+		'toggle' => "<div class=\"md_toggle\" data-role=\"slider\">\n\t\t\t<select name=\"%s\" data-role=\"slider\" class=\"%s md_toggle_element\">\n\t\t\t\t%s\n\t\t\t</select>\n\t\t</div>",
 		'text' => "\t\t<div class=\"md_text\">
 			<input 
 				onfocus=\"if(this.value == '%s'){this.value='';}\" 
